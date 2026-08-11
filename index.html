@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hard Drive Entertainment &mdash; Independent Record Label</title>
-<meta name="description" content="Hard Drive Entertainment, LLC &mdash; independent record label. Home of ABASI. Every song written &amp; produced by Terry Aundriel. Real stories. Real songwriting.">
+<meta name="description" content="Hard Drive Entertainment, LLC &mdash; independent record label from Queens, NY. Home of ABASI and Wade Holloway. Every song written &amp; produced by Terry Aundriel. Real stories. Real songwriting.">
 <meta property="og:title" content="Hard Drive Entertainment">
-<meta property="og:description" content="Independent record label. Home of ABASI. Say She Love Me &mdash; out now.">
+<meta property="og:description" content="Independent record label. Roots reggae, modern country, and a pen that writes it all. ABASI &middot; Wade Holloway.">
 <meta property="og:image" content="https://d2ol7oe51mr4n9.cloudfront.net/user_3G64J56JlSHu5FvQXNmIU3IuIOv/bc55c9f3-dca4-4322-b7c2-c0cb03a28eca.jpg">
 <meta property="og:url" content="https://harddriveentertainment.net">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,8 +29,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(10,10,12,.82)
 .nav-links a{text-decoration:none;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);transition:color .2s}
 .nav-links a:hover{color:var(--gold)}
 @media(max-width:700px){.nav-links{display:none}}
-header{position:relative;min-height:100svh;display:flex;align-items:flex-end;background:linear-gradient(180deg,rgba(10,10,12,.30) 0%,rgba(10,10,12,.52) 55%,var(--bg) 100%),url('https://d2ol7oe51mr4n9.cloudfront.net/user_3G64J56JlSHu5FvQXNmIU3IuIOv/a961e484-64c3-47e5-bbf7-5a1ceddf29be.jpg') center 18%/cover no-repeat}
-.hero-in{padding:0 0 9vh}
+header{position:relative;min-height:100svh;display:flex;align-items:flex-end;background:#000;overflow:hidden}
+header::before{content:'';position:absolute;inset:0;background:radial-gradient(1100px 620px at 22% 30%,rgba(226,182,92,.10) 0%,rgba(226,182,92,.035) 42%,transparent 72%);pointer-events:none}
+header::after{content:'';position:absolute;left:0;right:0;bottom:0;height:180px;background:linear-gradient(180deg,transparent,var(--bg));pointer-events:none}
+.hero-mark{position:absolute;top:92px;right:34px;z-index:3;width:min(30vw,330px)}
+.hero-mark img{width:100%;height:auto;mix-blend-mode:screen}
+@media(max-width:700px){.hero-mark{top:78px;right:18px;width:44vw}}
+.hero-in{padding:0 0 9vh;position:relative;z-index:2}
 .kicker{display:inline-block;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-soft);border:1px solid var(--line);padding:7px 14px;border-radius:30px;margin-bottom:22px;background:rgba(10,10,12,.45)}
 h1{font-size:clamp(42px,8.5vw,110px);line-height:.98;text-transform:uppercase}
 h1 .gold{color:var(--gold)}
@@ -48,7 +53,14 @@ h2{font-size:clamp(30px,4.5vw,54px);text-transform:uppercase;line-height:1.05;ma
 .sec-sub{color:var(--muted);max-width:680px;margin-bottom:44px}
 #artists{background:var(--bg2)}
 .artist-card{display:grid;grid-template-columns:1fr 1.1fr;gap:0;background:var(--panel);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden}
+.artist-card+.artist-card{margin-top:34px}
 .artist-photo{min-height:460px;background:url('https://d2ol7oe51mr4n9.cloudfront.net/user_3G64J56JlSHu5FvQXNmIU3IuIOv/4f02422b-573c-49bb-ad89-1f70e50d31d3.jpg') center top/cover no-repeat}
+.artist-photo.wade{background-image:url('wade_artist.jpg');background-position:center 22%}
+.artist-card.flip{grid-template-columns:1.1fr 1fr}
+.artist-card.flip .artist-photo{order:2}
+.artist-card.flip .artist-info{order:1}
+.badge{display:inline-block;align-self:flex-start;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#0a0a0c;background:var(--gold);padding:6px 12px;border-radius:30px;margin-bottom:14px;font-weight:700}
+.badge.soon{background:transparent;color:var(--gold);border:1px solid var(--line)}
 .artist-info{padding:44px 46px;display:flex;flex-direction:column;justify-content:center}
 .artist-name{font-family:'Archivo Black',sans-serif;font-size:clamp(34px,4vw,56px);letter-spacing:.06em}
 .artist-genre{color:var(--gold);font-size:13px;letter-spacing:.22em;text-transform:uppercase;margin:6px 0 18px}
@@ -59,7 +71,7 @@ h2{font-size:clamp(30px,4.5vw,54px);text-transform:uppercase;line-height:1.05;ma
 .chip:hover{border-color:var(--gold);color:var(--gold)}
 .roster-next{margin-top:26px;color:var(--muted);font-size:14px;letter-spacing:.06em}
 .roster-next b{color:var(--gold-soft)}
-@media(max-width:860px){.artist-card{grid-template-columns:1fr}.artist-photo{min-height:420px}.artist-info{padding:32px 26px}}
+@media(max-width:860px){.artist-card,.artist-card.flip{grid-template-columns:1fr}.artist-photo{min-height:420px}.artist-info{padding:32px 26px}.artist-card.flip .artist-photo{order:0}.artist-card.flip .artist-info{order:0}}
 .release{display:grid;grid-template-columns:minmax(280px,420px) 1fr;gap:54px;align-items:center}
 .cover{border-radius:10px;box-shadow:0 24px 70px rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.08)}
 .release h3{font-size:clamp(26px,3.4vw,42px);text-transform:uppercase;margin-bottom:6px}
@@ -83,7 +95,9 @@ blockquote{border-left:3px solid var(--gold);padding:14px 20px;background:rgba(2
 #contact{background:var(--bg2);text-align:center}
 #contact .btn{margin-top:8px}
 footer{border-top:1px solid rgba(255,255,255,.07);padding:34px 0;text-align:center;color:var(--muted);font-size:13px}
-footer .socials{margin-bottom:12px;display:flex;justify-content:center;gap:20px}
+footer .socials{margin-bottom:12px;display:flex;justify-content:center;gap:20px;flex-wrap:wrap}
+footer .frow{margin-bottom:14px}
+footer .frow .who{display:block;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:7px}
 footer .socials a{color:var(--muted);text-decoration:none;font-size:13px;letter-spacing:.1em;text-transform:uppercase}
 footer .socials a:hover{color:var(--gold)}
 </style>
@@ -102,13 +116,16 @@ footer .socials a:hover{color:var(--gold)}
 </div>
 </nav>
 <header id="top">
+<div class="hero-mark">
+<img src="hde_logo.png" alt="Hard Drive Entertainment logo" width="900" height="669">
+</div>
 <div class="wrap hero-in">
 <span class="kicker">Independent Record Label &middot; Est. Queens, NY</span>
-<h1>Hard Drive<br><span class="gold">Entertainment</span></h1>
-<p class="hero-sub">Real stories. Real songwriting. Fearless artists. Home of <b>ABASI</b> &mdash; the debut single &ldquo;Say She Love Me&rdquo; is out now on all platforms.</p>
+<h1>Real stories.<br><span class="gold">Real songwriting.</span></h1>
+<p class="hero-sub">An independent record label out of Queens, New York &mdash; roots reggae, modern country, and one pen behind every record.</p>
 <div class="hero-cta">
-<a class="btn btn-gold" href="#artists">Meet ABASI</a>
-<a class="btn btn-line" href="#music">Stream the Single</a>
+<a class="btn btn-gold" href="#artists">Meet the Roster</a>
+<a class="btn btn-line" href="#music">Stream the Music</a>
 </div>
 </div>
 </header>
@@ -117,10 +134,11 @@ footer .socials a:hover{color:var(--gold)}
 <div class="wrap">
 <div class="sec-kicker">The Roster</div>
 <h2>Our Artists</h2>
-<p class="sec-sub">Every Hard Drive artist is built on the same foundation: songs written from real life, produced with real hands.</p>
+<p class="sec-sub">Every Hard Drive artist is built on the same foundation: songs written from real life, produced with real hands. Different genres, same pen.</p>
 <div class="artist-card">
 <div class="artist-photo" role="img" aria-label="ABASI"></div>
 <div class="artist-info">
+<span class="badge">Out Now</span>
 <div class="artist-name">ABASI</div>
 <div class="artist-genre">Roots Reggae &middot; Lovers Rock &middot; Queens, NY</div>
 <p class="artist-bio">ABASI sings the everyday &mdash; love, trust, doubt, and the distance between two people on one couch. His debut single &ldquo;Say She Love Me&rdquo; turned a simple question into a worldwide conversation.</p>
@@ -133,9 +151,25 @@ footer .socials a:hover{color:var(--gold)}
 <a class="chip" href="https://www.instagram.com/abasisound" target="_blank" rel="noopener">Instagram</a>
 <a class="chip" href="https://abasimusic.github.io" target="_blank" rel="noopener">All Links</a>
 </div>
-<div class="roster-next"><b>Next signing:</b> in development. Hard Drive is growing.</div>
 </div>
 </div>
+<div class="artist-card flip">
+<div class="artist-photo wade" role="img" aria-label="Wade Holloway"></div>
+<div class="artist-info">
+<span class="badge soon">Debut Album &middot; August 19</span>
+<div class="artist-name">WADE HOLLOWAY</div>
+<div class="artist-genre">Modern Country &middot; Country Soul</div>
+<p class="artist-bio">A warm, weathered baritone with a Southern drawl and a storyteller&rsquo;s heart. Rugged but tender, funny but honest &mdash; Wade writes about the stuff that actually happens: falling hard, growing up, screwing up, and the people who stick around anyway.</p>
+<p class="artist-bio">His debut album <b>&ldquo;Love, Life &amp; Hurt&rdquo;</b> &mdash; ten songs, all true-ish &mdash; arrives August 19.</p>
+<div class="ai-note">The voice is AI. The music is human. Every lyric and every note &mdash; written and produced by Terry Aundriel.</div>
+<div class="artist-links">
+<a class="chip" href="https://www.instagram.com/wadehollowaymusic" target="_blank" rel="noopener">Instagram</a>
+<a class="chip" href="https://www.tiktok.com/@wadehollowaymusic" target="_blank" rel="noopener">TikTok</a>
+<a class="chip" href="https://www.youtube.com/@wadehollowaymusic" target="_blank" rel="noopener">YouTube</a>
+</div>
+</div>
+</div>
+<div class="roster-next"><b>Hard Drive is growing.</b> More artists in development.</div>
 </div>
 </section>
 <section id="music">
@@ -193,11 +227,22 @@ footer .socials a:hover{color:var(--gold)}
 </div>
 </section>
 <footer>
+<div class="frow">
+<span class="who">ABASI</span>
 <div class="socials">
 <a href="https://www.youtube.com/@ABASISOUND" target="_blank" rel="noopener">YouTube</a>
 <a href="https://www.tiktok.com/@abasisound" target="_blank" rel="noopener">TikTok</a>
 <a href="https://www.instagram.com/abasisound" target="_blank" rel="noopener">Instagram</a>
 <a href="https://soundcloud.com/abasisound" target="_blank" rel="noopener">SoundCloud</a>
+</div>
+</div>
+<div class="frow">
+<span class="who">Wade Holloway</span>
+<div class="socials">
+<a href="https://www.youtube.com/@wadehollowaymusic" target="_blank" rel="noopener">YouTube</a>
+<a href="https://www.tiktok.com/@wadehollowaymusic" target="_blank" rel="noopener">TikTok</a>
+<a href="https://www.instagram.com/wadehollowaymusic" target="_blank" rel="noopener">Instagram</a>
+</div>
 </div>
 &copy; 2026 Hard Drive Entertainment, LLC &middot; Queens, New York &middot; All rights reserved.
 </footer>

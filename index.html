@@ -81,6 +81,16 @@ h2{font-size:clamp(30px,4.5vw,54px);text-transform:uppercase;line-height:1.05;ma
 .stream{display:flex;align-items:center;gap:9px;text-decoration:none;background:var(--panel);border:1px solid rgba(255,255,255,.12);padding:13px 20px;border-radius:6px;font-weight:600;font-size:14.5px;transition:border-color .2s,transform .15s}
 .stream:hover{border-color:var(--gold);transform:translateY(-2px)}
 .stream span.ic{color:var(--gold);font-size:16px}
+.tracklist{margin:18px 0 20px 18px;color:#cfcbc3;columns:2;column-gap:28px}
+.tracklist li{margin:3px 0;padding-left:4px;font-size:15px}
+@media(max-width:640px){.tracklist{columns:1}}
+.ep-note{display:inline-block;border:1px solid var(--line);background:rgba(226,182,92,.07);color:var(--gold-soft);padding:11px 18px;border-radius:6px;font-size:14.5px}
+.prev-release{margin-top:64px;padding-top:40px;border-top:1px solid rgba(255,255,255,.09)}
+.prev-title{font-size:clamp(22px,2.6vw,30px);text-transform:uppercase;margin-bottom:6px}
+.prev-sub{color:var(--muted);margin-bottom:20px;max-width:520px}
+.prev-grid{display:grid;grid-template-columns:minmax(280px,460px) 1fr;gap:40px;align-items:center;margin-top:18px}
+.prev-still{width:100%;border-radius:10px;border:1px solid rgba(255,255,255,.08);box-shadow:0 18px 50px rgba(0,0,0,.55)}
+@media(max-width:860px){.prev-grid{grid-template-columns:1fr;gap:24px}}
 @media(max-width:860px){.release{grid-template-columns:1fr}}
 #video{background:var(--bg2)}
 .video-frame{position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.09);box-shadow:0 24px 70px rgba(0,0,0,.55)}
@@ -175,20 +185,42 @@ footer .socials a:hover{color:var(--gold)}
 </section>
 <section id="music">
 <div class="wrap">
-<div class="sec-kicker">Latest Release</div>
-<h2>Say She Love Me</h2>
+<div class="sec-kicker">New Release</div>
+<h2>Smoke &amp; Prayers</h2>
 <div class="release">
-<img class="cover" src="https://d2ol7oe51mr4n9.cloudfront.net/user_3G64J56JlSHu5FvQXNmIU3IuIOv/bc55c9f3-dca4-4322-b7c2-c0cb03a28eca.jpg" alt="ABASI - Say She Love Me single cover">
+<img class="cover" src="ep_cover.jpg" alt="ABASI - Smoke &amp; Prayers EP cover">
 <div>
-<h3>Say She Love Me</h3>
-<div class="by">ABASI &middot; Debut Single &middot; Out Now</div>
-<p>A lovers-rock story about the space between love and trust &mdash; the party, the glance, the tear, and the words nobody wants to say out loud: <i>she no trust me.</i></p>
+<h3>Smoke &amp; Prayers</h3>
+<div class="by">ABASI &middot; Debut EP &middot; Out August 19</div>
+<p>Eight tracks moving between devotion and survival &mdash; warm one-drop grooves, lovers-rock melody, and writing about the everyday: love, doubt, struggle and faith.</p>
+<ol class="tracklist">
+<li>Savage Lover</li>
+<li>So Alone</li>
+<li>Demons Emotions Away</li>
+<li>America</li>
+<li>No Shoot</li>
+<li>I Smoke</li>
+<li>Man Upstairs</li>
+<li>Neva Gone Away</li>
+</ol>
+<div class="ep-note">Streaming links go live on release day &mdash; <b>August 19</b>.</div>
+</div>
+</div>
+
+<div class="prev-release">
+<div class="sec-kicker" style="margin-top:8px">Out Now</div>
+<div class="prev-grid">
+<img class="prev-still" src="sslm_still.jpg" alt="ABASI performing Say She Love Me live on stage">
+<div>
+<h3 class="prev-title">Say She Love Me</h3>
+<p class="prev-sub">The debut single &mdash; a lovers-rock story about the space between love and trust: the party, the glance, the tear, and the words nobody wants to say out loud.</p>
 <div class="stream-grid">
 <a class="stream" href="https://open.spotify.com/track/1UDbjxZK4xG2pB0CkUpqAJ" target="_blank" rel="noopener"><span class="ic">&#9654;</span> Spotify</a>
 <a class="stream" href="https://music.apple.com/us/album/say-she-love-me/6795274174?i=6795274175" target="_blank" rel="noopener"><span class="ic">&#9834;</span> Apple Music</a>
 <a class="stream" href="https://pandora.app.link/Dn7rkLUoe5b" target="_blank" rel="noopener"><span class="ic">&#9678;</span> Pandora</a>
 <a class="stream" href="https://music.youtube.com/watch?v=lTBqF_0oi-M" target="_blank" rel="noopener"><span class="ic">&#9655;</span> YouTube Music</a>
 <a class="stream" href="https://soundcloud.com/abasisound" target="_blank" rel="noopener"><span class="ic">&#9729;</span> SoundCloud</a>
+</div>
 </div>
 </div>
 </div>
